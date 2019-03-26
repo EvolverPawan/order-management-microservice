@@ -7,14 +7,14 @@ const repository = (container) => {
       if (payment) {
         if (payment.cvc && payment.cvc === 123) {
           const paid = Object.assign({}, {
-            status: 'Payment Accepted',
+            status: 'Confirmed',
             user: payment.userName,
             amount: payment.amount
           })
           resolve(paid)
         } else {
           const declined = Object.assign({}, {
-            status: 'Payment Declined',
+            status: 'Cancelled',
             user: payment.userName,
             amount: payment.amount
           })

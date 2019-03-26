@@ -15,12 +15,4 @@ module.exports = ({ repo }, app) => {
       })
       .catch(next)
   })
-
-  // app.get('/payment/getPurchaseById/:id', (req, res, next) => {
-  //   repo.getPurchaseById(req.params.id)
-  //     .then(payment => {
-  //       res.status(status.OK).json({ payment })
-  //     })
-  //     .catch(next)
-  // })
 }

@@ -1,28 +1,3 @@
-/*
-  const container = createContainer()
-
-  container.register({
-    transient(user),
-    transient(ticket),
-    transient(booking),
-    singleton(objectID),
-    singleton(notifications),
-    singleton(payments)
-  })
-
-  function ({ User, Booking }) {
-    make some stuff with the user
-    Promise.all([
-      user.validate(object),
-      booking.validate(object)
-    ])
-    .then([user, booking] => {
-
-    })
-  }
-
-*/
-
 const createContainer = () => {
   // DI store
   const registrations = {}
@@ -64,16 +39,6 @@ const createContainer = () => {
         }
         return container.cache[name].fn
     }
-  }
-
-  const listDependencies = () => {
-    const list = []
-    for (var key in registrations) {
-      if (registrations.hasOwnProperty(key)) {
-        list.push(key)
-      }
-    }
-    return list
   }
 
   return Object.create(container)
