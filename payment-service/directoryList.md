@@ -1,16 +1,3 @@
-# Payment Microservice
-
-Major funcitonality is to process the payment and return the payment status. 
-  - Process payment
-  
-
-## Getting Started
-
-Order service calls payment service for processing of payments
-
-### Project Structure
-
-Here is the payment-service directory structure. Please refer directoryList.md file for details.  
 |-- microservice_client_demo
     |-- .eslintrc.json  
     |-- .gitignore
@@ -91,18 +78,3 @@ Here is the payment-service directory structure. Please refer directoryList.md f
         |-- server
             |-- server.js
             |-- server.spec.js
-
-### Installation
-Below are the steps to start the server.  
-  - git clone: git clone URL  
-  - cd payment-service  
-  - npm install  
-  - npm run start  
-
-### Scripts 
-  - test  : Run unit test cases  
-  - start : Start server  
-  - lint  : To check for linting.  
-  - node-debug : To run in debug mode.  
-  - coverage : Check the code coverage for test cases.  
-  - int-test : To run integration test cases.  
