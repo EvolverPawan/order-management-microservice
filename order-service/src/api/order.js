@@ -2,6 +2,10 @@
 const status = require('http-status')
 
 module.exports = ({ repo }, app) => {
+  /**
+   * Create order API: Valid user and order objects are required. After validation, payment service is 
+   * called to process the payment.
+   */
   app.post('/orders', (req, res, next) => {
     const validate = req.container.cradle.validate
     const paymentService = req.container.resolve('paymentService')
@@ -43,6 +47,10 @@ module.exports = ({ repo }, app) => {
       })
       .catch(next)
   })
+  /**
+   * Cancel Order API: This route sets the status of order to 'cancelled'.
+   * Note: Cancel order is valid only for orders which are in created or confirmed states.
+   */
   app.post('/orders/:id/cancel', (req, res, next) => {
     const params = req.params
     Promise.all([
@@ -58,6 +66,9 @@ module.exports = ({ repo }, app) => {
         .catch(next)
     ])
   })
+  /**
+   * Check Order status API: Thi route return the order detials along with status correponsing to orderId.
+   */
   app.get('/orders/:id', (req, res, next) => {
     const params = req.params
     Promise.all([
