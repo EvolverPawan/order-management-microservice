@@ -1,11 +1,11 @@
 # Order Management Microservice
 
 The service manages the state of orders. Major funcitonality includes 
-- Create Order
-- Cancel Order
-- Check Order status
+  - Create Order
+  - Cancel Order
+  - Check Order status
 
-                                                  Order Created
+                                                Order Created
                                                       | 
                                       --------------- | ---------------
                                       |                                 |
@@ -15,57 +15,57 @@ The service manages the state of orders. Major funcitonality includes
 
 ## Getting Started
 
-For payment processing, the service uses payment-service.
+For payment processing, payment-service has been used.
 
 ### Project Structure
 Here is the order-service directory structure. Please refer directoryList.md file for details.  
-|-- microservice_client_demo',
-    |-- .gitignore',
-    |-- README.md',
-    |-- env',
-    |-- env.example',
-    |-- package-lock.json',
-    |-- package.json',
-    |-- integration-test',
-    |   |-- index.js',
-    |-- src',
-        |-- index.js',
-        |-- api',
-        |   |-- order.js',
-        |   |-- order.spec.js',
-        |-- config',
-        |   |-- config.js',
-        |   |-- index.di.spec.js',
-        |   |-- index.js',
-        |   |-- db',
-        |   |   |-- index.js',
-        |   |   |-- mongo.js',
-        |   |   |-- mongo.spec.js',
-        |   |-- di',
-        |       |-- di.js',
-        |       |-- di.proto.js',
-        |       |-- index.js',
-        |-- models',
-        |   |-- index.js',
-        |   |-- index.spec.js',
-        |   |-- order.model.js',
-        |   |-- user.model.js',
-        |-- repository',
-        |   |-- repository.js',
-        |   |-- repository.spec.js',
-        |-- server',
-        |   |-- server.js',
-        |   |-- server.spec.js',
-        |-- services',
-            |-- index.js',
-            |-- payment.service.js'
+|---------- microservice_client_demo',
+    |---------- .gitignore',
+    |---------- README.md',
+    |---------- env',
+    |---------- env.example',
+    |---------- package-lock.json',
+    |---------- package.json',
+    |---------- integration-test',
+    |   |---------- index.js',
+    |---------- src',
+        |---------- index.js',
+        |---------- api',
+        |   |---------- order.js',
+        |   |---------- order.spec.js',
+        |---------- config',
+        |   |---------- config.js',
+        |   |---------- index.di.spec.js',
+        |   |---------- index.js',
+        |   |---------- db',
+        |   |   |---------- index.js',
+        |   |   |---------- mongo.js',
+        |   |   |---------- mongo.spec.js',
+        |   |---------- di',
+        |       |---------- di.js',
+        |       |---------- di.proto.js',
+        |       |---------- index.js',
+        |---------- models',
+        |   |---------- index.js',
+        |   |---------- index.spec.js',
+        |   |---------- order.model.js',
+        |   |---------- user.model.js',
+        |---------- repository',
+        |   |---------- repository.js',
+        |   |---------- repository.spec.js',
+        |---------- server',
+        |   |---------- server.js',
+        |   |---------- server.spec.js',
+        |---------- services',
+            |---------- index.js',
+            |---------- payment.service.js'
 
 ### Installation
 Below are the steps to start the server.
- - git clone: git clone URL  
- - cd order-service
- - npm install
- - npm run start
+  - git clone: git clone URL  
+  - cd order-service
+  - npm install
+  - npm run start
 
 ### Scripts 
   - test  : Run unit test cases
