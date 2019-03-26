@@ -37,8 +37,7 @@ const dbSettings = {
 }
 
 const serverSettings = {
-  port: process.env.PORT || 3000,
-  ssl: require('./ssl')
+  port: process.env.PORT || 3000
 }
 
 module.exports = Object.assign({}, { dbSettings, serverSettings })
