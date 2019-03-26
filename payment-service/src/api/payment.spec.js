@@ -7,7 +7,6 @@ const server = require('../server/server')
 
 describe('Payment API', () => {
   let app = null
-  let paid = null
 
   const serverSettings = {
     port: 3000
@@ -19,37 +18,6 @@ describe('Payment API', () => {
     validate: asValue(models.validate),
     serverSettings: asValue(serverSettings)
   })
-
-  let _testRepo = {
-    registerPurchase ({ container }, payment) {
-      return new Promise((resolve, reject) => {
-        // container.cradle.stripe.charges.create({
-        //   amount: Math.ceil(payment.amount * 100),
-        //   currency: payment.currency,
-        //   source: {
-        //     number: payment.number,
-        //     cvc: payment.cvc,
-        //     exp_month: payment.exp_month,
-        //     exp_year: payment.exp_year
-        //   },
-        //   description: payment.description
-        // }, (err, charge) => {
-        //   if (err && err.type === 'StripeCardError') {
-        //     reject(new Error('An error occuered procesing payment with stripe, err: ' + err))
-        //   } else {
-        //     const paid = Object.assign({}, { user: payment.userName, amount: payment.amount, charge })
-        //     resolve(paid)
-        //   }
-        // })
-      })
-    }
-  }
-
-  const testRepo = {}
-
-  testRepo.registerPurchase = _testRepo.registerPurchase.bind(null, { container })
-
-  container.registerValue({ repo: testRepo })
 
   beforeEach(() => {
     return server.start(container)
@@ -80,7 +48,6 @@ describe('Payment API', () => {
       .send({ paymentOrder: testPayment })
       .expect((res) => {
         should.ok(res.body.paid)
-        paid = res.body.paid
       })
       .expect(200, done)
   })

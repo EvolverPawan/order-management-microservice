@@ -1,7 +1,6 @@
 /* eslint-env mocha */
-const {EventEmitter} = require('events')
-const test = require('assert')
-const {init} = require('./')
+const { EventEmitter } = require('events')
+const { init } = require('./')
 
 describe('DI configuration', () => {
   it('can init dependencies to the container', (done) => {
