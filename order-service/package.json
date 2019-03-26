@@ -8,7 +8,6 @@
     "start": "node src/index.js",
     "lint": "standard --verbose | snazzy",
     "node-debug": "DEBUG=express* node src/index.js",
-    "chrome-debug": "node --debug-brk --inspect src/index.js",
     "coverage": "istanbul cover _mocha $(find ./src -name \"*.spec.js\" -not -path \"./node_modules/*\") ",
     "int-test": "node_modules/.bin/mocha integration-test/index.js"
   },
