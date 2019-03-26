@@ -1,5 +1,5 @@
 const dbSettings = {
-  db: process.env.DB || 'payment',
+  db: process.env.DB || 'microserviceDemoDB',
   user: process.env.DB_USER || 'test',
   pass: process.env.DB_PASS || 'test1234',
   repl: process.env.DB_REPLS || 'rs1',

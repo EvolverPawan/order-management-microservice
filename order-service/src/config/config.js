@@ -2,9 +2,9 @@ const orderProcessParameters = {
   millisecondToDeleverOrder: process.env.MILLISECONDS_TO_DELIVER_ORDER || 10000
 }
 const dbSettings = {
-  db: process.env.DB || 'payment',
-  user: process.env.DB_USER || 'cristian',
-  pass: process.env.DB_PASS || 'cristianPassword2017',
+  db: process.env.DB || 'microserviceDemoDB',
+  user: process.env.DB_USER || 'root',
+  pass: process.env.DB_PASS || 'root123',
   // repl: process.env.DB_REPLS || 'rs1',
   servers: (process.env.DB_SERVERS) ? process.env.DB_SERVERS.substr(1, process.env.DB_SERVERS.length - 2).split(' ') : [
     '127.0.0.1:27017'
